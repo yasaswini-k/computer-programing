@@ -1,0 +1,120 @@
+program 1
+#include <stdio.h>
+void main()
+{
+    char ch;
+    clrscr();
+    printf("Enter any alphabet: ");
+    scanf("%c", &ch);
+    switch(ch)
+     {
+        case 'a': 
+            printf("Vowel");
+            break;
+        case 'e': 
+            printf("Vowel");
+            break;
+        case 'i': 
+            printf("Vowel");
+            break;
+        case 'o': 
+            printf("Vowel");
+            break;
+        case 'u': 
+            printf("Vowel");
+            break;
+        case 'A': 
+            printf("Vowel");
+            break;
+        case 'E': 
+            printf("Vowel");
+            break;
+        case 'I': 
+            printf("Vowel");
+            break;
+        case 'O': 
+            printf("Vowel");
+            break;
+        case 'U': 
+            printf("Vowel");
+            break;
+        default: 
+            printf("Consonant");
+     }
+   getch();
+}
+
+program 2:
+
+#include<stdio.h>
+#include<conio.h>
+int mints(int hr,int min)
+{
+min+=(hr*60);
+return min;
+}
+void main()
+{
+int h,m,tm; 
+clrscr();
+printf("\n enter hour \n ");
+scanf("%d", &h);
+printf("\n enter min \n ");
+scanf("%d", &m);
+tm=mints(h,m);
+printf("\n total number of minutes in %d hours and %d minutes is:%d",h,m,tm);
+getch();
+}
+
+program 3:
+
+#include<stdio.h>
+void main()
+{
+int n;
+clrscr();
+printf("\n enter a number \n ");
+scanf("%d", &n);
+switch(n)
+{
+case 1:
+printf("month corresponding the number entered is january\n");
+break;
+case 2:
+printf("month corresponding the number entered is february\n");
+break;
+case 3:
+printf("month corresponding the number entered is march\n");
+break;
+case 4:
+printf("month corresponding the number entered is april\n");
+break;
+case 5:
+printf("month corresponding the number entered is may\n");
+break;
+case 6:
+printf("month corresponding the number entered is june\n");
+break;
+case 7:
+printf("month corresponding the number entered is july\n");
+break;
+case 8:
+printf("month corresponding the number entered is august\n");
+break;
+case 9:
+printf("month corresponding the number entered is september\n");
+break;
+case 10:
+printf("month corresponding the number entered is october\n");
+break;
+case 11:
+printf("month corresponding the number entered is november\n");
+break;
+case 12:
+printf("month corresponding the number entered is december\n");
+break;
+default:
+printf("wrong number entered\n");
+}
+getch();
+}
