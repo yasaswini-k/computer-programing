@@ -1,0 +1,100 @@
+#include <stdio.h>
+ 
+int main()
+{
+   int m, n, c, d, first[10][10], second[10][10], sum[10][10];
+   clrscr();
+   printf("Enter the number of rows and columns of matrix\n");
+   scanf("%d%d", &m, &n);
+   printf("Enter the elements of first matrix\n");
+   for(c=0;c<m;c++)
+   for(d=0;d<n;d++)
+   scanf("%d",&first[c][d]);
+   printf("Enter the elements of second matrix\n");
+   for(c=0;c<m;c++)
+   for(d=0;d<n;d++)
+   scanf("%d", &second[c][d]);
+   printf("Sum of entered matrices:-\n");
+   for(c=0;c<m;c++) {
+   for(d=0;d<n;d++) {
+   sum[c][d] = first[c][d] + second[c][d];
+   printf("%d\t", sum[c][d]);
+      }
+      printf("\n");
+   }
+ getch();
+   return 0;
+}
+
+#include <stdio.h>
+int main() {
+  int a[10][10], transpose[10][10],r,c,i,j;
+clrscr();
+  printf("Enter rows and columns: ");
+  scanf("%d %d",&r,&c);
+// asssigning elements to the matrix
+  printf("\nEnter matrix elements:\n");
+  for(i=0;i<r;++i)
+  for(j=0;j<c;++j)
+ {
+    printf("Enter element a%d%d: ",i+1,j+1);
+    scanf("%d", &a[i][j]);
+  }
+// printing the matrix a[][]
+  printf("\nEntered matrix: \n");
+  for(i=0;i<r;++i)
+  for(j=0;j<c;++j) {
+    printf("%d  ", a[i][j]);
+    if (j==c-1)
+    printf("\n");
+  }
+// computing the transpose
+  for(i=0;i<r;++i)
+  for(j=0;j<c;++j) {
+    transpose[j][i]=a[i][j];
+  }
+  // printing the transpose
+  printf("\nTranspose of the matrix:\n");
+  for(i=0;i<c;++i)
+  for(j=0;j<r;++j)
+ {
+    printf("%d  ", transpose[i][j]);
+    if (j==r-1)
+    printf("\n");
+  }
+getch();
+  return 0;
+}
+
+#include<stdio.h>
+int main()
+{
+int marks[3][4],maxmarks[3],r,c;
+clrscr();
+for(r=0;r<3;r++)
+{
+printf("enter the marks of a all students in subjects %d:",(r+1));
+for(c=0;c<4;c++)
+{
+scanf("%d",&marks[r][c]);
+}
+}
+for(r=0;r<3;r++)
+{
+maxmarks[r]=0;
+for(c=0;c<4;c++)
+{
+if(marks[r][c]>maxmarks[r])
+{
+maxmarks[r]=marks[r][c];
+}
+}
+}
+printf("MAXIMUM MARKS ARE AS FOLLOWS:\n");
+for(r=0;r<3;r++)
+{
+printf("maximum marks of students in subject %d is:%d\n",(r+1),maxmarks[r]);
+}
+getch();
+return 0;
+}
