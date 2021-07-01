@@ -1,0 +1,78 @@
+#include <stdio.h>
+int main()
+{
+   char str1[50], str2[50], i, j,length=0;
+   clrscr();
+   printf("\nEnter first string: ");
+   scanf("%s",str1);
+   printf("\nEnter second string: ");
+   scanf("%s",str2);
+   for(i=0; str1[i]!='\0'; ++i); 
+   for(j=0; str2[j]!='\0'; ++j, ++i)
+   {
+      str1[i]=str2[j];
+   }
+  str1[i]='\0';
+  printf("\nconcatenated string: %s",str1);
+ for (i = 0; str1[i] != '\0'; i++)
+    {
+        length++;
+    }
+  printf("\nthe length of concatenated string= %d\n",length);
+  getch();
+  return 0;
+}
+
+#include <stdio.h>
+int main()
+{
+char s1[100], s2[100], i,length=0;
+clrscr();
+printf("\nEnter the string to be copied: ");
+scanf("%s",s1);
+for (i = 0; s1[i] != '\0'; ++i) 
+{
+s2[i] = s1[i];
+}
+s2[i] = '\0';
+printf("copied string: %s", s2);
+for (i = 0; s1[i] != '\0'; i++)
+    {
+        length++;
+    }
+  printf("\nthe length of copied string= %d\n",length);
+  getch();  
+  return 0;
+}
+
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+  	char Str[100], RevStr[100];
+        int i, j, len,c=0 ;
+        clrscr();
+  	printf("\n enter a string to be reversed:  ");
+  	gets(Str); 	
+  	j = 0;
+  	len = strlen(Str);
+  	for (i = len - 1; i >= 0; i--)
+  	{
+  		RevStr[j++] = Str[i];
+  	}
+  	RevStr[i] = '\0';
+  	printf("\n String after Reversing = %s", RevStr); 	
+         for(i=0;i<len/2;i++)  
+        {
+    	if(Str[i]==Str[len-i-1])
+    	c++;
+       	}
+ 	if(c==i)
+ 	    printf("string entered is palindrome");
+    else
+        printf("string entered is not palindrome");    
+  	getch();
+return 0;
+}
+
+    
