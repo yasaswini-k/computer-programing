@@ -1,0 +1,193 @@
+#include<stdio.h>
+
+int main()
+
+{
+
+	int no1,no2;
+
+	int *ptr1,*ptr2;	
+
+        int sum,sub,mult;
+
+        float div,rem; 
+clrscr();  
+
+    printf("Enter number1:\n");
+
+    scanf("%d",&no1);
+
+    printf("Enter number2:\n");
+
+    scanf("%d",&no2);
+
+    
+
+    ptr1=&no1;//ptr1 stores address of no1
+
+    ptr2=&no2;//ptr2 stores address of no2
+
+    
+
+    sum=(*ptr1) + (*ptr2);
+
+    sub=(*ptr1) - (*ptr2);
+
+    mult=(*ptr1) * (*ptr2);
+
+    div=(*ptr1) / (*ptr2);
+
+    rem=(*ptr1) % (*ptr2);
+
+    printf("sum= %d\n",sum);
+
+    printf("subtraction= %d\n",sub);
+
+    printf("Multiplication= %d\n",mult);
+
+    printf("Division= %f\n",div);
+    
+    printf("reminder= %f\n",rem);
+
+     getch();
+
+    return 0;
+
+}
+#include <stdio.h>
+int main()
+{
+clrscr();v 
+struct book
+{
+char author[20];
+char title[20];
+float price;
+int no_pages;
+char publication[20];
+}
+book1,book2,book3;
+
+printf("\nEnter the book-1 details:");
+printf("\nAuthor:");
+scanf("%s",book1.author);
+printf("\ntitle:");
+ scanf("%s",book1.title);
+printf("\nprice:");
+scanf("%f",&book1.price);
+printf("\nnumber of pages:");
+scanf("%d",&book1.no_pages);
+printf("\ndate of publication:");
+scanf("%s",book1.publication);
+
+printf("\nEnter the book-2 details:");
+printf("\nAuthor:");
+scanf("%s",book2.author);
+printf("\ntitle:");
+ scanf("%s",book2.title);
+printf("\nprice:");
+scanf("%f",&book2.price);
+printf("\nnumber of pages:");
+scanf("%d",&book2.no_pages);
+printf("\ndate of publication:");
+scanf("%s",book2.publication);
+
+printf("\nEnter the book-3 details:");
+printf("\nAuthor:");
+scanf("%s",book3.author);
+printf("\ntitle:");
+ scanf("%s",book3.title);
+printf("\nprice:");
+scanf("%f",&book3.price);
+printf("\nnumber of pages:");
+scanf("%d",&book3.no_pages);
+printf("\ndate of publication:");
+scanf("%s",book3.publication);
+
+if(book1.price>=book2.price && book1.price>=book3.price)
+{
+printf("Book-1 has the highest price: details:Author=%s\n, Title=%s\n, price=%f\n,Number of pages=%d\n,Date of publication=%s\n",book1.author,book1.title,book1.price,book1.no_pages,book1.publication);
+}
+else if (book2.price>=book1.price && book2.price>=book3.price)
+{
+printf("Book-2 has the highest price:Its details are:Author=%s\n, Title=%s\n, price=%f\n,Number of pages=%d\n,Date of publication=%s\n",book2.author,book2.title,book2.price,book2.no_pages,book2.publication);
+}
+else
+{
+printf("Book-3 has the highest price:Its details are:Author=%s\n Title=%s\n price=%f\nNumber of pages=%d\n Date of publication=%s\n",book3.author,book3.title,book3.price,book3.no_pages,book3.publication);
+}
+getch();
+return 0;
+}
+void swap(int *x,int *y)
+{
+int t;
+t = *x;
+*x = *y;
+*y = t;
+}
+int main()
+{
+int num1,num2;
+clrscr();
+printf("Enter value of num1: ");
+scanf("%d",&num1);
+printf("Enter value of num2: ");
+scanf("%d", &num2);
+printf("After Swapping: num1 is: %d, num2 is: %d\n",num1,num2);
+getch();
+return 0;
+}
+#include<stdio.h>
+int main()
+{
+struct student
+{
+char roll_numb[100];
+char name[100],sec[30],dept[50];
+int result,fee;
+}
+stud1,stud2;
+
+printf("\nEnter the details of student 1:");
+printf("\nname:");
+scanf("%s",stud1.name);
+printf("\nsection:");
+ scanf("%s",stud1.sec);
+printf("\nroll number:");
+scanf("%s",&stud1.roll_numb);
+printf("\ndepartment:");
+scanf("%s",&stud1.dept);
+printf("\nfee:");
+scanf("%d",&stud1.fee);
+printf("\nresult:");
+scanf("%d",&stud1.result);
+
+printf("\nEnter the details of student 2:");
+printf("\nname:");
+scanf("%s",stud2.name);
+printf("\nsection:");
+ scanf("%s",stud2.sec);
+printf("\nroll number:");
+scanf("%s",&stud2.roll_numb);
+printf("\ndepartment:");
+scanf("%s",&stud2.dept);
+printf("\nfee:");
+scanf("%d",&stud2.fee);
+printf("\nresult:");
+scanf("%d",&stud2.result);
+
+if(stud1.result>=stud2.result)
+{
+printf("student 1 got the hightest marks \n the details of the student is as follows: \nname:%s\nsection:%s\nroll number:%s\ndepartment:%s\nfee:%d\nresult:%d",stud1.name,stud1.sec,stud1.roll_numb,stud1.dept,stud1.fee,stud1.result);
+}
+if(stud2.result>=stud1.result)
+{
+printf("student 2 got the hightest marks \n the details of the student is as follows: \nname:%s\nsection:%s\nroll number:%s\ndepartment:%s\nfee:%d\nresult:%d",stud2.name,stud2.sec,stud2.roll_numb,stud2.dept,stud2.fee,stud2.result);
+}
+getch();
+return 0;
+}
+
+
+
